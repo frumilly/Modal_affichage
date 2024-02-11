@@ -1,0 +1,16 @@
+{
+    "name": "openclassroom-modal-02022023",
+    "version": "1.0.0",
+    "description": "Une bibliothèque de composants React, y compris un composant Modal.",
+    "main": "src/lib/Modal.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "react",
+      "modal"
+    ],
+    "author": "Fatima ouerfelli",
+    "license": "MIT"
+  }
+  
