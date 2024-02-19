@@ -1,11 +1,11 @@
-# Modal_affichage
+# react-customise-modal-bis
 # Modal React
 
 Le composant Modal est une boîte de dialogue modale flexible et personnalisable pour les applications React.
 
 ## Installation
 
-npm install Modal_affichage
+npm install react-customise-modal-bis
 
 
 ## Utilisation

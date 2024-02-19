@@ -1,16 +1,22 @@
 {
-    "name": "openclassroom-modal-02022023",
-    "version": "1.0.0",
+    "name": "react-customise-modal-bis",
+    "version": "8.0.0",
     "description": "Une bibliothèque de composants React, y compris un composant Modal.",
-    "main": "src/lib/Modal.js",
+    "main": "dist/index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1", 
+      "build": "babel src/lib/Modal.jsx --out-file dist/Modal.js && xcopy /Y \"src/lib/Modal.css\" \"dist/Modal.css\" && xcopy /Y \"dist/Modal.js\" \"dist/index.js\""
     },
     "keywords": [
       "react",
       "modal"
     ],
     "author": "Fatima ouerfelli",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+      "@babel/cli": "^7.23.9",
+      "@babel/preset-env": "^7.23.9",
+      "@babel/preset-react": "^7.23.3"
+    }
   }
   
