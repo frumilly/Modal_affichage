@@ -14,6 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * @param {string} [props.message="Hello modal"] - Le message à afficher dans la modal.
  * @param {function} props.onOk - La fonction à appeler lorsque l'utilisateur clique sur le bouton "OK".
  * @param {function} props.onClose - La fonction à appeler lorsque l'utilisateur ferme la modal.
+ * @param {string} [props.textColor="#000"] - Couleur du texte par défaut.
+ * @param {string} [props.modalBackground="#fff"] - Fond de la modale par défaut.
  * @returns {JSX.Element|null} Le composant Modal.
  */
 var Modal = function Modal(_ref) {
@@ -21,7 +23,11 @@ var Modal = function Modal(_ref) {
     _ref$message = _ref.message,
     message = _ref$message === void 0 ? "Hello modal" : _ref$message,
     onOk = _ref.onOk,
-    onClose = _ref.onClose;
+    onClose = _ref.onClose,
+    _ref$textColor = _ref.textColor,
+    textColor = _ref$textColor === void 0 ? "#000" : _ref$textColor,
+    _ref$modalBackground = _ref.modalBackground,
+    modalBackground = _ref$modalBackground === void 0 ? "#fff" : _ref$modalBackground;
   if (!isOpen) {
     return null;
   }
@@ -35,12 +41,17 @@ var Modal = function Modal(_ref) {
     onOk();
     onClose();
   };
+  var modalStyle = {
+    color: textColor,
+    backgroundColor: modalBackground
+  };
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "modal-overlay"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "modal-container"
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "modal-content"
+    className: "modal-content",
+    style: modalStyle
   }, /*#__PURE__*/_react["default"].createElement("button", {
     className: "close-btn",
     onClick: onClose

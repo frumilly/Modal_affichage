@@ -8,9 +8,11 @@ import './Modal.css';
  * @param {string} [props.message="Hello modal"] - Le message à afficher dans la modal.
  * @param {function} props.onOk - La fonction à appeler lorsque l'utilisateur clique sur le bouton "OK".
  * @param {function} props.onClose - La fonction à appeler lorsque l'utilisateur ferme la modal.
+ * @param {string} [props.textColor="#000"] - Couleur du texte par défaut.
+ * @param {string} [props.modalBackground="#fff"] - Fond de la modale par défaut.
  * @returns {JSX.Element|null} Le composant Modal.
  */
-const Modal = ({ isOpen, message = "Hello modal", onOk, onClose }) => {
+const Modal = ({ isOpen, message = "Hello modal", onOk, onClose, textColor = "#000", modalBackground = "#fff" }) => {
   if (!isOpen) {
     return null;
   }
@@ -25,10 +27,15 @@ const Modal = ({ isOpen, message = "Hello modal", onOk, onClose }) => {
     onClose();
   };
 
+  const modalStyle = {
+    color: textColor,
+    backgroundColor: modalBackground
+  };
+
   return (
     <div className="modal-overlay">
       <div className="modal-container">
-        <div className="modal-content">
+        <div className="modal-content" style={modalStyle}>
           <button className="close-btn" onClick={onClose}>X</button>
           <p>{message}</p>
           <div className="modal-buttons">

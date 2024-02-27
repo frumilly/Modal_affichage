@@ -1,22 +1,27 @@
 {
-    "name": "react-customise-modal-bis",
-    "version": "8.0.0",
-    "description": "Une bibliothèque de composants React, y compris un composant Modal.",
-    "main": "dist/index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1", 
-      "build": "babel src/lib/Modal.jsx --out-file dist/Modal.js && xcopy /Y \"src/lib/Modal.css\" \"dist/Modal.css\" && xcopy /Y \"dist/Modal.js\" \"dist/index.js\""
-    },
-    "keywords": [
-      "react",
-      "modal"
-    ],
-    "author": "Fatima ouerfelli",
-    "license": "MIT",
-    "dependencies": {
-      "@babel/cli": "^7.23.9",
-      "@babel/preset-env": "^7.23.9",
-      "@babel/preset-react": "^7.23.3"
-    }
+  "name": "react-customise-modal-bis",
+  "version": "10.0.0",
+  "description": "Une bibliothèque de composants React, y compris un composant Modal.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "build": "babel src/lib/Modal.jsx --out-file dist/Modal.js && xcopy /Y \"src/lib/Modal.css\" \"dist/Modal.css\" && xcopy /Y \"dist/Modal.js\" \"dist/index.js\""
+  },
+  "keywords": [
+    "react",
+    "modal"
+  ],
+  "author": "Fatima ouerfelli",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^18.2.0",
+    "react-transform-hmr": "^1.0.4"
   }
-  
+}
